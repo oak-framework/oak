@@ -1,0 +1,30 @@
+{
+    "name": "mbaue/oak",
+    "description": "OAK Framework - Simple but functional",
+    "type": "project",
+    "require": {
+        "digitalnature/php-ref": "dev-master",
+        "slashtrace/slashtrace": "^1.1.2",
+        "gabordemooij/redbean": "dev-master",
+        "symfony/dotenv": "^5.0",
+        "symfony/http-foundation": "^5.0",
+        "laravel/helpers": "^1.2",
+        "symfony/console": "^5.0",
+        "latte/latte": "^2.7"
+    },
+    "license": "Public",
+    "authors": [
+        {
+            "name": "Murat ALABACAK",
+            "email": "alabacakm@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            
+        ]
+    },
+    "require-dev": {
+        "iraldoad/symfony-dd": "^2.0"
+    }
+}

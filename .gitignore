@@ -1,0 +1,4 @@
+documentation/*
+vendor/*
+composer.lock
+libraries.txt
