@@ -22,7 +22,6 @@ $systemCommands = [
 	System\Core\Zeus\DbClean::class,
 	System\Core\Zeus\DbNuke::class,
 
-
 	System\Core\Zeus\MakeController::class,
 ];
 foreach($systemCommands as $systemCommand)

@@ -8,7 +8,6 @@ class WelcomeController extends Controller
 	{
 		$view = view('index');
 
-
 		return $view;
 	}
 }
