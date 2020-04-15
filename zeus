@@ -1,0 +1,46 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Require the globals
+ */
+require_once __DIR__.'/globals.php';
+
+/**
+ * Require the bootloader
+ */
+require_once SYSTEM_PATH.'/Core/Boot/init.php';
+
+use Symfony\Component\Console\Application;
+$application = new Application();
+
+/**
+ * 1- System commands
+ */
+$systemCommands = [
+	System\Core\Zeus\DbSeed::class,
+	System\Core\Zeus\DbReload::class,
+	System\Core\Zeus\DbClean::class,
+	System\Core\Zeus\DbNuke::class,
+
+
+	System\Core\Zeus\MakeController::class,
+];
+foreach($systemCommands as $systemCommand)
+{
+	$application->add(with($systemCommand));
+}
+
+/**
+ * 2- Application commands
+ */
+$applicationCommands = (array) require_once(APP_PATH.'/Zeus/register.php');
+foreach($applicationCommands as $applicationCommand)
+{
+	$application->add(with($applicationCommand));
+}
+
+
+/**
+ * Run the console
+ */
+$application->run();
